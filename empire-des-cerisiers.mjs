@@ -13,7 +13,7 @@ import EDC from "./module/config.mjs";
 import registerSystemSettings from "./module/settings.mjs";
 
 // Import Submodules
-// import * as applications from "./module/applications/_module.mjs";
+import * as applications from "./module/applications/_module.mjs";
 // import * as dataModels from "./module/data/_module.mjs";
 // import * as documents from "./module/documents/_module.mjs";
 
@@ -61,7 +61,7 @@ Hooks.once("init", function() {
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("empire-des-cerisiers", PlayerActorSheet, {
+  Actors.registerSheet("empire-des-cerisiers", applications.actor.ActorSheet5eCharacter , { // PlayerActorSheet
     types: ["character", "player"],
     makeDefault: true,
     label: "DND5E.SheetClassCharacter"

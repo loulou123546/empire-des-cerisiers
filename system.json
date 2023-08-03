@@ -2,14 +2,14 @@
   "id": "empire-des-cerisiers",
   "title": "L'Empire des Cerisiers",
   "description": "Non-official system for L'Empire des Cerisiers. Original book written by Olivier Sanfilippo at Arkhane Asylum.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "compatibility": {
     "minimum": "10.291",
     "verified": "11"
   },
   "url": "https://github.com/loulou123546/empire-des-cerisiers",
   "manifest": "https://raw.githubusercontent.com/loulou123546/empire-des-cerisiers/master/system.json",
-  "download": "https://github.com/loulou123546/empire-des-cerisiers/archive/refs/tags/1.1.1.zip",
+  "download": "https://github.com/loulou123546/empire-des-cerisiers/archive/refs/tags/1.1.2.zip",
   "authors": [
     {
       "name": "Olivier Sanfilippo",

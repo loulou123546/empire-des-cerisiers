@@ -45,7 +45,7 @@ Hooks.once("init", function() {
   CONFIG.EDC = EDC;
   CONFIG.Actor.documentClass = PlayerActor;
   // CONFIG.Item.documentClass = documents.ItemEDC;
-  game.edc.isV10 = game.release.generation < 11;
+  game.isV10 = game.release.generation < 11;
 
   // Configure trackable attributes.
   // _configureTrackableAttributes();

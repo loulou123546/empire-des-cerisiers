@@ -1,0 +1,44 @@
+
+<div class="flex flex-row">
+    
+    <img src="systems/empire-des-cerisiers/ui/character-sheets/logo.png" alt="L'Empire des Cerisiers" class="flex-none border-0 max-h-20">
+
+    <div class="grow flex flex-col yozakura">
+
+        <div class="flex-1 flex flex-row">
+            <div class="flex-1 flex flex-row items-center">
+                <!-- label and input text -->
+                <label class="flex-none mx-2" for="name">{{localize 'PlayerActorSheet.name'}} :</label>
+                <input class="grow bottom-line" data-dtype="String" type="text" name="name" value="{{data.name}}">
+            </div>
+            <div class="flex-1 flex flex-row items-center">
+                <!-- label and input text -->
+                <label class="flex-none mx-2" for="origin">{{localize 'PlayerActorSheet.origins'}} :</label>
+                <input class="grow bottom-line" data-dtype="String" type="text" name="system.origin" id="origin" value="{{data.system.origin}}">
+            </div>
+        </div>
+
+        <div class="flex-1 flex flex-row items-center">
+            <!-- label and input text -->
+            <label class="flex-none mx-2" for="concept">{{localize 'PlayerActorSheet.concept'}} :</label>
+            <input class="grow bottom-line" data-dtype="String" style="height: 2rem;" type="text" name="system.concept" id="concept" value="{{data.system.concept}}">
+        </div>
+    </div>
+</div>
+
+<div class="flex my-2">
+    <svg style="width:25%; height:1em;" viewBox="0 0 1000 50">
+        {{> 'systems/empire-des-cerisiers/ui/commons/single_line_50_1000.html'}}
+    </svg>
+    <svg style="width:25%; height:1em;" viewBox="0 0 1000 50">
+        {{> 'systems/empire-des-cerisiers/ui/commons/single_line_50_1000.html'}}
+    </svg>
+    <svg style="width:25%; height:1em;" viewBox="0 0 1000 50">
+        {{> 'systems/empire-des-cerisiers/ui/commons/single_line_50_1000.html'}}
+    </svg>
+    <svg style="width:25%; height:1em;" viewBox="0 0 1000 50">
+        {{> 'systems/empire-des-cerisiers/ui/commons/single_line_50_1000.html'}}
+    </svg>
+</div>
+
+

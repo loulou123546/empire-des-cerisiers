@@ -1,0 +1,14 @@
+
+<div class="flex flex-col yozakura w-full h-full">
+
+    <h3 class="flex-none text-lg mb-2">{{localize 'PlayerActorSheet.disadvantages'}}</h3>
+
+    <div class="flex-1">
+<textarea name="system.disadvantages" data-dtype="String" class="w-full h-full min-h-256 yozakura">{{data.system.disadvantages}}</textarea>
+    </div>
+
+    <div class="flex-none">
+        {{localize 'PlayerActorSheet.wounds'}} : <input class="max-w-[50px]" style="text-align: end;" type="number" data-dtype="Number" max="35" min="0" step="1" name="system.wounds" value="{{calcWounds data.system.wounds}}"> / 35 ({{localize 'PlayerActorSheet.malus'}}: {{calcMalus data.system.wounds}})
+    </div>
+
+</div>

@@ -1,0 +1,48 @@
+input.bottom-line {
+    border: 0;
+    border-bottom: 3px solid #000;
+}
+
+/* http://brushfonts.com/en/ */
+
+@font-face {
+    font-family: 'YozakuraJP';
+    src: url('/systems/empire-des-cerisiers/ui/commons/yozakura.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    descent-override: 40%;
+}
+
+.yozakura {
+    font-family: 'YozakuraJP';
+    line-height: 2rem;
+}
+
+.yozakura.text-xs, .yozakura .text-xs {
+    font-size: 0.6rem;
+}
+.yozakura.text-sm, .yozakura .text-sm {
+    font-size: 0.8rem;
+}
+.yozakura.text-base, .yozakura .text-base {
+    font-size: 1rem;
+}
+.yozakura.text-lg, .yozakura .text-lg {
+    font-size: 1.2rem;
+}
+.yozakura.text-xl, .yozakura .text-xl {
+    font-size: 1.4rem;
+}
+.yozakura.text-2xl, .yozakura .text-2xl {
+    font-size: 1.6rem;
+}
+.yozakura.text-3xl, .yozakura .text-3xl {
+    font-size: 1.8rem;
+}
+.yozakura.text-4xl, .yozakura .text-4xl {
+    font-size: 2rem;
+}
+
+.h-full-page {
+    height: calc(99% - 5rem - 1rem - 1em);
+}

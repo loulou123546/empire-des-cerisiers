@@ -13,13 +13,14 @@ import EDC from "./module/config.mjs";
 import registerSystemSettings from "./module/settings.mjs";
 
 // Import Submodules
-import * as applications from "./module/applications/_module.mjs";
+// import * as applications from "./module/applications/_module.mjs";
 // import * as dataModels from "./module/data/_module.mjs";
 // import * as documents from "./module/documents/_module.mjs";
 
 
 import { PlayerActor } from "./scripts/characters/player.js";
 import { PlayerActorSheet } from "./scripts/characters/player-sheet.js";
+import { PlayerActorSheetDND } from "./scripts/characters/player-sheet-dnd.js";
 import { preloadHandlebarsTemplates, registerHandlebarsHelpers } from "./scripts/handlebars.js";
 
 /* -------------------------------------------- */
@@ -61,10 +62,15 @@ Hooks.once("init", function() {
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("empire-des-cerisiers", applications.actor.ActorSheet5eCharacter , { // PlayerActorSheet
+  Actors.registerSheet("empire-des-cerisiers", PlayerActorSheet, {
     types: ["character", "player"],
     makeDefault: true,
     label: "DND5E.SheetClassCharacter"
+  });
+  Actors.registerSheet("empire-des-cerisiers", PlayerActorSheetDND, {
+    types: ["character", "player"],
+    makeDefault: false,
+    label: "DND5E.SECOND_TEST"
   });
 
   // Items.unregisterSheet("core", ItemSheet);

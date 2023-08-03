@@ -4,12 +4,42 @@ import { PlayerActorSheet } from "./characters/player-sheet.js";
 export async function preloadHandlebarsTemplates() {
     const partials = [
         PlayerActorSheet.templateFiles,
+        [
+            // Shared Partials
+            "systems/empire-des-cerisiers/templates/actors/parts/active-effects.hbs",
+            "systems/empire-des-cerisiers/templates/apps/parts/trait-list.hbs",
+        
+            // Actor Sheet Partials
+            "systems/empire-des-cerisiers/templates/actors/parts/actor-traits.hbs",
+            "systems/empire-des-cerisiers/templates/actors/parts/actor-inventory.hbs",
+            "systems/empire-des-cerisiers/templates/actors/parts/actor-features.hbs",
+            "systems/empire-des-cerisiers/templates/actors/parts/actor-spellbook.hbs",
+            "systems/empire-des-cerisiers/templates/actors/parts/actor-warnings.hbs",
+        
+            // Item Sheet Partials
+            "systems/empire-des-cerisiers/templates/items/parts/item-action.hbs",
+            "systems/empire-des-cerisiers/templates/items/parts/item-activation.hbs",
+            "systems/empire-des-cerisiers/templates/items/parts/item-advancement.hbs",
+            "systems/empire-des-cerisiers/templates/items/parts/item-description.hbs",
+            "systems/empire-des-cerisiers/templates/items/parts/item-mountable.hbs",
+            "systems/empire-des-cerisiers/templates/items/parts/item-spellcasting.hbs",
+            "systems/empire-des-cerisiers/templates/items/parts/item-summary.hbs",
+        
+            // Journal Partials
+            "systems/empire-des-cerisiers/templates/journal/parts/journal-table.hbs",
+        
+            // Advancement Partials
+            "systems/empire-des-cerisiers/templates/advancement/parts/advancement-controls.hbs",
+            "systems/empire-des-cerisiers/templates/advancement/parts/advancement-spell-config.hbs"
+          ]
     ].flat()
   
     const paths = {};
     for ( const path of partials ) {
-      paths[path] = path;
-      paths[`edc.${path.split("/").pop().replace(".html", "")}`] = path;
+        paths[path] = path;
+        paths[`edc.${path.split("/").pop().replace(".html", "")}`] = path;
+        paths[path.replace(".hbs", ".html")] = path;
+        paths[`dnd5e.${path.split("/").pop().replace(".hbs", "")}`] = path;
     }
   
     return loadTemplates(paths);
